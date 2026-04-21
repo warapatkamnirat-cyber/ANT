@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Across the Miles | For My Princess</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Kanit:wght@100;300;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #080808;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            position: relative;
+            padding: 20px;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at bottom, #111 0%, #000 100%);
+        }
+
+        .glass-box {
+            background: var(--glass);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            padding: clamp(30px, 8vw, 80px);
+            border-radius: 40px;
+            text-align: center;
+            max-width: 850px;
+            width: 100%;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        section.reveal .glass-box {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            background: linear-gradient(180deg, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 12px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .quote {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            line-height: 2;
+            font-weight: 200;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        /* LDR Distance Component */
+        .distance-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            opacity: 0.7;
+        }
+
+        .dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 10px var(--gold); }
+        .line { flex-grow: 1; height: 1px; background: linear-gradient(90deg, var(--gold), transparent, var(--gold)); max-width: 150px; }
+
+        .magic-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 18px 50px;
+            border-radius: 100px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+
+        .magic-btn:hover {
+            background: var(--gold);
+            color: black;
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.4);
+        }
+
+        .footer-note {
+            position: absolute;
+            bottom: 30px;
+            font-weight: 100;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            color: var(--gold);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        
+        <section class="reveal">
+            <div class="glass-box">
+                <p style="letter-spacing: 8px; font-weight: 100; color: var(--gold); margin-bottom: 15px;">MILES APART</p>
+                <h1>MY PRINCESS</h1>
+                <div class="distance-line">
+                    <div class="dot"></div>
+                    <div class="line"></div>
+                    <span style="font-size: 1.2rem;">❤️</span>
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <p class="quote">
+                    "ถึงแม้ระยะทางจะทำให้เราไม่ได้อยู่ใกล้กัน <br>
+                    แต่ใจของผม... ไม่เคยอยู่ห่างจากคุณเลยแม้แต่วันเดียว"
+                </p>
+            </div>
+            <div class="footer-note">SCROLL TO SEE MY HEART</div>
+        </section>
+
+        <section>
+            <div class="glass-box">
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 30px; letter-spacing: 5px;">MY TRUTH</h2>
+                <p class="quote" style="font-style: italic;">
+                    "ผมขอโทษที่ไม่มีรูปถ่ายคู่สวยๆ เหมือนใครเขา <br>
+                    แต่รูปที่ชัดที่สุด... คือภาพของคุณที่อยู่ในใจผมตลอดเวลา <br>
+                    คุณคือ 'เจ้าหญิง' เพียงคนเดียวที่ผมจะดูแลให้ดีที่สุด"
+                </p>
+                <div style="font-size: 3rem; margin-top: 20px;">👑</div>
+            </div>
+        </section>
+
+        <section>
+            <div class="glass-box">
+                <h1>MY PROMISE</h1>
+                <p class="quote">
+                    "ไม่ว่าจะต้องรอนานแค่ไหน <br>
+                    ผมจะสร้างความสำเร็จนี้เพื่อรอรับคุณมาอยู่ด้วยกัน <br>
+                    และวันนั้น... เราจะมีรูปคู่กันที่สวยที่สุดในโลก"
+                </p>
+                <button class="magic-btn" onclick="celebrate()">ส่งความรักผ่านดวงดาว</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 120 },
+                color: { value: '#d4af37' },
+                shape: { type: 'star' },
+                opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1 } },
+                size: { value: 2, random: true },
+                move: { enable: true, speed: 0.5, direction: 'top', random: true, out_mode: 'out' }
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('reveal');
+                else entry.target.classList.remove('reveal');
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('section').forEach(s => observer.observe(s));
+
+        function celebrate() {
+            const end = Date.now() + 3000;
+            (function frame() {
+                confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#d4af37', '#fff'] });
+                confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#d4af37', '#fff'] });
+                if (Date.now() < end) requestAnimationFrame(frame);
+            }());
+        }
+    </script>
+</body>
+</html>
